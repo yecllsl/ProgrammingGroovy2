@@ -6,6 +6,7 @@
  * We make no guarantees that this code is fit for any purpose. 
  * Visit http://www.pragmaticprogrammer.com/titles/vslg2 for more book information.
 ***/
+//多返回值
 println "//" + "START:MULTIPLEASSIGN_OUTPUT"
 def splitName(fullName) { fullName.split(' ') }
 

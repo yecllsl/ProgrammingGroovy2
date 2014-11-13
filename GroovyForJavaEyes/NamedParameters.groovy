@@ -8,7 +8,7 @@
 ***/
 class Robot {
   def type, height, width
-  def access(location, weight, fragile) {
+  def access(location, weight, fragile) {//灵活的初始化
     println "Received fragile? $fragile, weight: $weight, loc: $location"
   }
 }
@@ -19,6 +19,6 @@ robot.access(x: 30, y: 20, z: 10, 50, true)
 //You can change the order
 robot.access(50, true, x: 30, y: 20, z: 10)
 
-def access(Map location, weight, fragile) {
+def access(Map location, weight, fragile) {//具名参数
   print "Received fragile? $fragile, weight: $weight, loc: $location"
 }

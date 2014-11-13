@@ -21,7 +21,7 @@ frame.contentPane.add positionLabel
 frame.contentPane.add msgLabel
 
 button.addActionListener(
-  { JOptionPane.showMessageDialog(frame, "You clicked!") } as ActionListener
+  { JOptionPane.showMessageDialog(frame, "You clicked!") } as ActionListener//as关键字处理要实现的接口
 )
 
 displayMouseLocation = { positionLabel.setText("$it.x, $it.y") }
@@ -38,7 +38,7 @@ events = ['WindowListener', 'ComponentListener']
 // Above list may be dynamic and may come from some input
 handler = { msgLabel.setText("$it") }
 for (event in events) {
-  handlerImpl = handler.asType(Class.forName("java.awt.event.${event}"))
+  handlerImpl = handler.asType(Class.forName("java.awt.event.${event}"))//asType()处理行为是动态的，只有运行时才知道接口名字的情况。
   frame."add${event}"(handlerImpl)
 }
 

@@ -7,7 +7,7 @@
  * Visit http://www.pragmaticprogrammer.com/titles/vslg2 for more book information.
 ***/
 println "//" + "START:OPTIONAL_OUTPUT"
-def log(x, base=10) {
+def log(x, base=10) {//可选形参，不提供实参，默认为10
   Math.log(x) / Math.log(base)
 }
 
@@ -17,7 +17,7 @@ println log(1024, 2)
 println "//" + "END:OPTIONAL_OUTPUT"
 
 println "//" + "START:ARRAY_OUTPUT"
-def task(name, String[] details) {
+def task(name, String[] details) {//末尾的数组形参是可选的，最后一个形参可以是零或多个值
   println "$name - $details"
 }
 
